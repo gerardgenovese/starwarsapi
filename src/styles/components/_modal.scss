@@ -2,11 +2,9 @@
 .ReactModal__Body--open {
   overflow-y: hidden;
   margin-right: 1.7rem;
-  // width: 25%;
 }
 
 .ReactModal__Overlay .ReactModal__Overlay--after-open{
-  // padding: 5rem;
 }
 
 .ReactModalPortal > div {
@@ -14,21 +12,10 @@
 }
 .ReactModalPortal .ReactModal__Overlay{
   transition: opacity .3s ease-in-out;
-  
-  // display:flex;
-  // justify-content:center;
-  // align-items:center;
 }
 .ReactModalPortal .ReactModal__Overlay--after-open{
   opacity: 1;
   overflow:scroll;
-
-  // @media(max-width:400px){
-  //   padding-top: 5rem;
-  // }
-  // @media(max-width:360px){
-  //   padding-top: 15rem;
-  // }
 }
 .ReactModalPortal .ReactModal__Overlay--before-close{
   opacity: 0;
@@ -127,15 +114,6 @@ $colors: rgb(230, 20, 20), rgb(16, 165, 16),rgb(114, 114, 240);
 
 
 }
-
-
-
-
-
-
-
-
-
 
 
 // ::-webkit-scrollbar { 
