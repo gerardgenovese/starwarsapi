@@ -29,23 +29,29 @@ class CharactersPage extends React.Component {
 		console.log(this.props);
 		return (
 			<div>
-				{this.props.imagesP ? 
+			
+
 					<div className="bg">
 						<div className="content">
 							<div className="content-names">
 								{
 									imagesP.map((image, index) => {
+										{setTimout(() => {
 										return (
 											<img className="content-names--img" key={index} src={image} id={index} onClick={this.getChar} />
 										)
+										},300)		}
 									})
 								}
 								<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={imagesP} />
 							</div>
 						</div>
 					</div>
-				: "Loading..."	
-				}
+
+
+	
+					
+		
 			</div>
 		)
 	}
