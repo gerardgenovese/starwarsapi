@@ -47,13 +47,13 @@ class FilmsPage extends React.Component {
 								)
 							})
 						} */}
-						<img src={this.state.images[0]} alt="Star Wars" />
-						<img src={this.state.images[2]} alt="Star Wars" />
-						<img src={this.state.images[1]} alt="Star Wars" />
-						<img src={this.state.images[3]} alt="Star Wars" />
-						<img src={this.state.images[4]} alt="Star Wars" />
-						<img src={this.state.images[5]} alt="Star Wars" />
-						<img src={this.state.images[6]} alt="Star Wars" />
+						<img className="content-names--img" src={this.state.images[0]} id="0" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[2]} id="2" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[1]} id="1" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[3]} id="3" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[4]} id="4" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[5]} id="5" alt="Star Wars" onClick={this.getFilm} />
+						<img className="content-names--img" src={this.state.images[6]} id="6" alt="Star Wars" onClick={this.getFilm} />
 						<FilmModal selectedOption={this.state.selectedOption} filmChoice={this.state.filmChoice} removeModal={this.removeModal} films={films} images={this.state.images} />
 					</div>
 				</div>

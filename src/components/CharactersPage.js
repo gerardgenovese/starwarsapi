@@ -54,16 +54,16 @@ class CharactersPage extends React.Component {
 									)
 								})
 								} */}
-										<img src={this.state.images[0]} alt="Star Wars" />
-										<img src={this.state.images[2]} alt="Star Wars" />
-										<img src={this.state.images[1]} alt="Star Wars" />
-										<img src={this.state.images[3]} alt="Star Wars" />
-										<img src={this.state.images[4]} alt="Star Wars" />
-										<img src={this.state.images[5]} alt="Star Wars" />
-										<img src={this.state.images[6]} alt="Star Wars" />
-										<img src={this.state.images[7]} alt="Star Wars" />
-										<img src={this.state.images[8]} alt="Star Wars" />
-										<img src={this.state.images[9]} alt="Star Wars" />
+										<img className="content-names--img" src={this.state.images[0]} id="0" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[2]} id="2" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[1]} id="1" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[3]} id="3" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[4]} id="4" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[5]} id="5" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[6]} id="6" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[7]} id="7" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[8]} id="8" alt="Star Wars" onClick={this.getChar}/>
+										<img className="content-names--img" src={this.state.images[9]} id="9" alt="Star Wars" onClick={this.getChar}/>
 								<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={this.state.images} />
 							</div>
 						</div>
