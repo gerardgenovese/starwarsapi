@@ -3,9 +3,21 @@ import CharModal from "./CharModal";
 
 class CharactersPage extends React.Component {
 	state = {
+		images: [
+			"/images/people/luke.jpg",
+			"/images/people/c3po.jpg",
+			"/images/people/r2d2.jpg",
+			"/images/people/vader.jpg",
+			"/images/people/leia.jpg",
+			"/images/people/owen-lars.jpg",
+			"/images/people/beru-lars.jpg",
+			"/images/people/r5d4.jpg",
+			"/images/people/darklighter.jpg",
+			"/images/people/kenobi.jpg"
+		],
 		selectedOption: false,
 		charChoice: 0
-	}
+	};
 
 	getChar = (e) => {
 		const target = e.target.id;
@@ -15,18 +27,19 @@ class CharactersPage extends React.Component {
 				charChoice: target
 			}
 		})
-	}
+	};
 	removeModal = () => {
 		this.setState(() => {
 			return {
 				selectedOption: false
 			}
 		})
-	}
+	};
+
 
 	render() {
-		const { people, imagesP } = this.props;
-		console.log(this.props);
+		const { people } = this.props;
+		console.log(this.state);
 		return (
 			<div>
 			
@@ -35,15 +48,13 @@ class CharactersPage extends React.Component {
 						<div className="content">
 							<div className="content-names">
 								{
-									imagesP.map((image, index) => {
-										{setTimout(() => {
-										return (
-											<img className="content-names--img" key={index} src={image} id={index} onClick={this.getChar} />
-										)
-										},300)		}
-									})
+								this.state.images.map((image, index) => {
+									return (
+										<img className="content-names--img" key={index} src={image} id={index} onClick={this.getChar} />
+									)
+								})
 								}
-								<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={imagesP} />
+								<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={this.state.images} />
 							</div>
 						</div>
 					</div>

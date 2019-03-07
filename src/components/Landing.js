@@ -11,26 +11,8 @@ class Landing extends React.Component {
 		this.state = {
 			count: 0,
 			films: [],
-			images: [
-				"/images/films/a-new-hope.jpg", "/images/films/attack-of-the-clones.jpg",
-				"/images/films/the-phantom-menace.jpg", "/images/films/revenge-of-the-sith.jpg",
-				"/images/films/return-of-the-jedi.jpg",
-				"/images/films/empire-strikes-back.jpg", "/images/films/the-force-awakens.jpg"
-			],
-			loading: true,
 			people: [],
-			imagesP: [
-				"/images/people/luke.jpg",
-				"/images/people/c3po.jpg",
-				"/images/people/r2d2.jpg",
-				"/images/people/vader.jpg",
-				"/images/people/leia.jpg",
-				"/images/people/owen-lars.jpg",
-				"/images/people/beru-lars.jpg",
-				"/images/people/r5d4.jpg",
-				"/images/people/darklighter.jpg",
-				"/images/people/kenobi.jpg"
-			],
+			loading: true,
 			homeNav: true,
 			filmsNav: false,
 			charNav: false
@@ -91,7 +73,7 @@ class Landing extends React.Component {
 };
 	render() {
 
-		const { films, images, people, imagesP, slideShow } = this.state;
+		const { films, people } = this.state;
 		return (
 	
 			<div>
@@ -120,7 +102,7 @@ class Landing extends React.Component {
 					</nav>
 					<main className="main">
 						{
-							this.state.count === 0 ? <LandingPage /> : this.state.count === 1 ? <FilmsPage films={films} images={images} /> : <CharactersPage people={people} imagesP={imagesP} />
+							this.state.count === 0 ? <LandingPage /> : this.state.count === 1 ? <FilmsPage films={films} /> : <CharactersPage people={people} />
 						}
 					</main>
 				</div>
