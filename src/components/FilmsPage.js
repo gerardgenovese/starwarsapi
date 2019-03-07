@@ -40,13 +40,20 @@ class FilmsPage extends React.Component {
 			<div className="bg">
 				<div className="content">
 					<div className="content-names">
-						{
+						{/* {
 							this.state.images.map((image, index) => {
 								return (
 									<img className="content-names--img" key={index} src={image} id={index} onClick={this.getFilm} />
 								)
 							})
-						}
+						} */}
+						<img src={this.state.images[0]} alt="Star Wars" />
+						<img src={this.state.images[2]} alt="Star Wars" />
+						<img src={this.state.images[1]} alt="Star Wars" />
+						<img src={this.state.images[3]} alt="Star Wars" />
+						<img src={this.state.images[4]} alt="Star Wars" />
+						<img src={this.state.images[5]} alt="Star Wars" />
+						<img src={this.state.images[6]} alt="Star Wars" />
 						<FilmModal selectedOption={this.state.selectedOption} filmChoice={this.state.filmChoice} removeModal={this.removeModal} films={films} images={this.state.images} />
 					</div>
 				</div>
