@@ -26,20 +26,26 @@ class CharactersPage extends React.Component {
 
 	render() {
 		const { people, imagesP } = this.props;
+		console.log(this.props);
 		return (
-			<div className="bg">
-			<div className="content">
-				<div className="content-names">
-					{
-						imagesP.map((image, index) => {
-							return (
-								<img className="content-names--img" key={index} src={image} id={index} onClick={this.getChar} />
-							)
-						})
-					}
-					<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={imagesP} />
-				</div>
-			</div>
+			<div>
+				{this.props.imagesP ? 
+					<div className="bg">
+						<div className="content">
+							<div className="content-names">
+								{
+									imagesP.map((image, index) => {
+										return (
+											<img className="content-names--img" key={index} src={image} id={index} onClick={this.getChar} />
+										)
+									})
+								}
+								<CharModal selectedOption={this.state.selectedOption} charChoice={this.state.charChoice} removeModal={this.removeModal} people={people} images={imagesP} />
+							</div>
+						</div>
+					</div>
+				: "Loading..."	
+				}
 			</div>
 		)
 	}

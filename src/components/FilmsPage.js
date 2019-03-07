@@ -26,9 +26,10 @@ class FilmsPage extends React.Component {
 
 	render() {
 		const { films, images } = this.props;
+		console.log(this.props)
 		return (
 			<div className="bg">
-			{films ? 
+			{this.props.images ? 
 			<div className="content">
 				<div className="content-names">
 					{
