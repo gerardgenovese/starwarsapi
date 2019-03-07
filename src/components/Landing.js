@@ -86,6 +86,7 @@ class Landing extends React.Component {
 			count: 2,
 			homeNav: false,
 			filmsNav: false,
+			charNav: true
 		});
 };
 	render() {
@@ -95,22 +96,22 @@ class Landing extends React.Component {
 	
 			<div>
 
-			{this.state.films && 
+
 				<div className="bg">
 					<Header />
 					<nav className="nav">
 
-						<div onClick={this.landingPage} className={this.state.homeNav ? "nav-item active" : "nav-item"} index={0}>
+						<div onClick={this.landingPage} className={this.state.homeNav ? "nav-item active" : "nav-item"}>
 							<a href="#" className="nav-link">
 								<span>HOME</span>
 							</a>
 						</div>
-						<div onClick={this.filmsPage} className={this.state.filmsNav ? "nav-item active" : "nav-item"} index={1}>
+						<div onClick={this.filmsPage} className={this.state.filmsNav ? "nav-item active" : "nav-item"}>
 							<a href="#" className="nav-link">
 								<span>Films</span>
 							</a>
 						</div>
-						<div onClick={this.charsPage} className={this.state.charNav ? "nav-item active" : "nav-item"} index={2}>
+						<div onClick={this.charsPage} className={this.state.charNav ? "nav-item active" : "nav-item"}>
 							<a href="#" className="nav-link">
 								<span>Characters</span>
 							</a>
@@ -123,8 +124,6 @@ class Landing extends React.Component {
 						}
 					</main>
 				</div>
-}
-
 		</div>
 		)
 	}
