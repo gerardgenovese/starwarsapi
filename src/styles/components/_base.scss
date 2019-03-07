@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  // max-width: 140rem;
+  margin: 0 auto;
+}
+
+
+.bg{
+  // background-image: url("../../public/images/bg.jpg");
+  background-image: url("../../public/images/bg1.jpg");
+  // background-repeat:no-repeat;
+  background-repeat: repeat;
+  background-size:1920px 1080px;
+  height: 100%;
+
+}

@@ -1,0 +1,50 @@
+.landing {
+  position: relative;
+  &-img{
+    width: 100%;
+  }
+
+  &-prev,
+  &-next{
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    border:none;
+    background:rgba(94, 16, 16, 0.404);;
+    color:rgba(255, 255, 255, 0.397);
+    padding: 5rem 1rem;
+    cursor: pointer;
+    outline:none;
+    transition:.3s;
+
+    @media(max-width:768px){
+      background:none;
+      padding: 0 .5rem;
+    }
+    &:hover{
+      background:rgb(228, 7, 7);
+      color:rgba(255, 255, 255, 0.973);
+      transition:.3s;
+
+      @media(max-width:768px){
+        background:none;
+      }
+
+    }
+  }
+
+  &-prev{
+    left: 0;
+    transform:translateY(-50%);
+  }
+   
+  &-next {
+    right: 0;
+    transform:translateY(-50%);
+  }
+
+
+  &-scroll{
+    height: 20vh;
+  }
+}

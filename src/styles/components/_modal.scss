@@ -1,0 +1,143 @@
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+  margin-right: 1.7rem;
+  // width: 25%;
+}
+
+.ReactModal__Overlay .ReactModal__Overlay--after-open{
+  // padding: 5rem;
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+.ReactModalPortal .ReactModal__Overlay{
+  transition: opacity .3s ease-in-out;
+  
+  // display:flex;
+  // justify-content:center;
+  // align-items:center;
+}
+.ReactModalPortal .ReactModal__Overlay--after-open{
+  opacity: 1;
+  overflow:scroll;
+
+  // @media(max-width:400px){
+  //   padding-top: 5rem;
+  // }
+  // @media(max-width:360px){
+  //   padding-top: 15rem;
+  // }
+}
+.ReactModalPortal .ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+$colors: rgb(230, 20, 20), rgb(16, 165, 16),rgb(114, 114, 240);
+
+.modal {
+  background-image: url("../../public/images/modal-bg.jpg");
+
+
+  display:block;
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 50%;
+
+  @media(max-width: 768px){
+    width: 100%;
+  }
+  &-close{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
+  &-close button{
+    background:none;
+    color: white;
+    border:none;
+    font-size: 3rem;
+    cursor:pointer;
+  }
+
+  &-title{
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight:bold;
+    text-transform: uppercase;
+    text-align:center;
+    background:red;
+    color:white;
+    margin: 0 37.5%;
+    letter-spacing: 3px;
+
+    @media(max-width:768px){
+      margin: 0 10%;
+    }
+  }
+
+  &-img{
+    width: 25%;
+    display:block;
+    margin: 0 auto;
+    border: 2px solid red;
+    border-bottom: none;
+
+  }
+  &-info{
+    display:flex;
+    justify-content:center;
+    font-size:1.6rem;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    padding: 2rem;
+    background:white;
+    border-top: 2px solid red;
+
+    & > p {
+      padding: 0 2rem;
+      letter-spacing: 2px;
+    }
+
+    &-stats{
+      background:black;
+      color: white;
+    }
+  }
+
+  
+  &-credits{
+    background:white;
+    color:rgb(3, 3, 3);
+
+    & > h1 {
+      margin: 0 15%;
+      padding: 3rem 0;
+      text-align:center;
+      border-top: 2px solid red;
+      text-transform:uppercase;
+    }
+  }
+  &-openingCrawl{
+    font-size:1.8rem;
+    font-family: helvetica;
+    padding: 0 5rem 3rem 5rem;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// ::-webkit-scrollbar { 
+//   display: none; 
+// }
